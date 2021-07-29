@@ -1,8 +1,7 @@
 import { render } from '@testing-library/react'
 import '../css/style.css'
 import banner from '../../imagenes/cultivourbano_banner.png'
-
-
+import CartWidget from './CartWidget'
 
 function NavBar (){
     const slide = (e) => {
@@ -35,10 +34,9 @@ function NavBar (){
             <img src={banner} alt=""/>
         </div> 
         <nav>
-            <div className="user_info">
-                <i className="fas fa-shopping-cart"><div className="prod_counter"></div></i>
-                <i className="fas fa-user"></i>
-            </div>
+            
+            <CartWidget/>
+
             <div onClick={slide} className="burger">
                 <div className="line1"></div>
                 <div className="line2"></div>

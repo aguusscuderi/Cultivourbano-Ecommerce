@@ -1,0 +1,93 @@
+// Columns
+$grid-columns: 12 !default;
+//
+$col: $grid-columns;
+//
+$gutter: 0.25rem;
+
+$gutters: (
+  1: $gutter,
+  2: $gutter * 2,
+  3: $gutter * 3,
+  4: $gutter * 4,
+  5: $gutter * 5,
+  6: $gutter * 6,
+  7: $gutter * 7,
+  8: $gutter * 8,
+);
+
+$mq-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+) !default;
+
+
+// Media Queries
+@mixin col($number) {
+    flex: 0 0 column($number);
+    max-width: column($number);
+  }
+  
+  
+  @mixin mq($key) {
+    $size: map-get($mq-breakpoints, $key);
+    
+    @media only screen and (min-width: $size) {
+      @content;
+    }
+  }
+  
+  
+  
+  @function column($number) {
+    @return percentage($number) * 1 / $grid-columns;
+  }
+
+
+  %floatleft {
+    float: left;
+  }
+  
+  %paddleftright {
+    position: relative;
+    width: 100%;
+    //padding-right: 15px;
+    //padding-left: 15px;
+  }
+
+  
+  
+@each $size, $name in $mq-breakpoints {
+  @include mq(#{$size}) {
+    @if $col > 0 {
+      @for $i from 1 through $col {
+        .in-#{$size}-#{$i} {
+          @include col($i);
+        }
+      }
+    }
+  }
+}
+
+@each $size, $name in $mq-breakpoints {
+  @if $col > 0 {
+    @for $i from 1 through $col {
+      .in-#{$size}-#{$i} {
+        @extend %floatleft;
+      }
+    }
+  }
+}
+
+@each $size, $name in $mq-breakpoints {
+  @if $col > 0 {
+    @for $i from 1 through $col {
+      .in-#{$size}-#{$i} {
+        @extend %paddleftright;
+      }
+    }
+  }
+}
