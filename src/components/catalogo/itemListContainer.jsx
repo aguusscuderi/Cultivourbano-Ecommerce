@@ -1,8 +1,15 @@
+import ItemCount from './ItemCount';
+
 function ItemListContainer(props) {
+
     return(
-        <>
-        <h1>{props.greeting}</h1>
-        </>
+        <ItemCount stock = "5" initial = "1"  onAdd = {(counter, stock, cartCounter) => {
+            if(counter <= stock ){
+                cartCounter.innerHTML = counter
+            }else{
+                console.log('no hay stock')
+            }
+        }}/>
     )
 }
 

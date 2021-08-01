@@ -448,8 +448,36 @@ nav .mobile__nav-container .flex__ul li a {
     max-width: 100%;
   }
 }
-.row {
-  grid-template-rows: 1fr;
+.itemBuy_container {
+  height: 100px;
+  width: 300px;
+  background-color: #A6D372;
+  padding: 15px;
+  text-align: center;
+}
+.itemBuy_container b {
+  display: block;
+  color: white;
+}
+.itemBuy_container .buyButtons_container {
+  position: relative;
+  top: 30%;
+}
+.itemBuy_container .buyButtons_container button {
+  margin: 0px 20px;
+}
+.itemBuy_container .buyButtons_container .plus {
+  border-radius: 50%;
+  border: 1px solid black;
+  transform: scale(1.5);
+}
+.itemBuy_container .buyButtons_container .addCart {
+  transform: scale(1.3);
+}
+.itemBuy_container .buyButtons_container .rest {
+  border-radius: 50%;
+  border: 1px solid black;
+  transform: scale(1.5);
 }
 
 /*# sourceMappingURL=style.css.map */
