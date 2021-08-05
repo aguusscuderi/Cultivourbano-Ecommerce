@@ -44,7 +44,7 @@ function NavBar (){
             </div>
             <div className="mobile__nav-container mb__nav-container-visible">
                 <ul className="flex__ul">
-                    <li className="flex__li-item"> <a href=" " className="navLink"> <i class="fas fa-home"></i> Inicio  </a> </li>
+                    <li className="flex__li-item"> <a href=" " className="navLink"> <i className="fas fa-home"></i> Inicio  </a> </li>
                     <li className="flex__li-item"> <a href=" " className="navLink"> <i className="fas fa-question-circle"></i> Quienes somos </a> </li>
                     <li className="flex__li-item"> <a href=" " className="navLink"> <i className="fas fa-store"></i> Productos </a></li>
                     <li className="flex__li-item"> <a href=" " className="navLink"> <i className="fas fa-users"></i>  Contactanos  </a> </li>

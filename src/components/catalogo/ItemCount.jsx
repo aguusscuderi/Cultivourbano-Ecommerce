@@ -6,7 +6,7 @@ function ItemCount(props){
     const cartNumber = document.querySelector('.prod_counter')
 
     useEffect(() => {
-
+        console.log('changed')
     }, [count])
 
     return(
