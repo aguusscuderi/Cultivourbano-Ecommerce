@@ -1,4 +1,9 @@
 @import './navBar';
 @import './grid-system/gridSystem';
-@import './product'
+@import './product';
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
 

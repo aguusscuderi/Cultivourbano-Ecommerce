@@ -14,11 +14,32 @@ function ItemList() {
         },
         {
 			id: 2,
-			title: "titulo2",
-			description: "string2",
-			price: "string2",
+			title: "PRODUCTO NUMERO UNO",
+			description: "AAAAAAAAAAAAAA",
+			price: "$150",
 			pictureUrl: "url2",
-        }
+        },
+		{
+			id: 1,
+			title: "titulo",
+			description: "string",
+			price: "string",
+			pictureUrl: "url",
+        },
+		{
+			id: 1,
+			title: "titulo",
+			description: "string",
+			price: "string",
+			pictureUrl: "url",
+        },
+		{
+			id: 1,
+			title: "titulo",
+			description: "string",
+			price: "string",
+			pictureUrl: "url",
+        },
 	];
 
 	useEffect(() => {
@@ -38,7 +59,17 @@ function ItemList() {
 
     return (
         <>
-        <Item data={products} />
+		<div className="row">
+			<div className="in-sm-12 in-md-8 in-lg-8">
+				<div className="row">
+					<Item data={products} />
+				</div>
+			</div>
+			<div className="in-sm-12 in-md-4 in-lg-4">
+			  
+			</div>
+		</div>
+		
         </>
     )
      
