@@ -491,6 +491,7 @@ nav .mobile__nav-container .flex__ul li a {
   background: #F5F5F5;
   box-shadow: 5px 5px 15px rgba(186, 126, 126, 0.5);
   border-radius: 10px;
+  margin-top: 50px;
 }
 
 p {
@@ -615,6 +616,10 @@ footer a:hover {
 .row {
   display: flex;
   flex-wrap: wrap;
+}
+
+body {
+  background-color: #FCFFF2;
 }
 
 /*# sourceMappingURL=style.css.map */

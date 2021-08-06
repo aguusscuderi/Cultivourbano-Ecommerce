@@ -6,27 +6,30 @@ function ItemCount(props){
     const cartNumber = document.querySelector('.prod_counter')
 
     useEffect(() => {
-        console.log('changed')
-    }, [count])
+        const divButt = document.querySelectorAll('.buttons')
+        divButt.forEach(el => {
+            if(el.parentElement.className !== "product"){
+                el.remove()
+            }
+        })
 
+    }, [count])
+    
     return(
-        <div className="itemBuy_container">
-            <b>PRODUCTO</b>
-            <div className="buyButtons_container">
+            <div className="buttdiv buttons">
                 <div className="counter">{count}</div>
 
-                <button className="plus" onClick={ () => (
+                <button className="" onClick={ () => (
                     setCount(count + 1)
                 )}> + </button>
 
-                <button className="addCart" onClick={() => (props.onAdd(count, props.stock, cartNumber))}>Add to cart</button>
+                <button className="add" onClick={() => (props.onAdd(count, props.stock, cartNumber))}>Add to cart</button>
 
-                <button className="rest" onClick = {() => (
+                <button className="" onClick = {() => (
                     setCount(count - 1)
                 )}> - </button>
 
             </div>
-        </div> 
     )
 }
 

@@ -15,7 +15,7 @@ function ItemList() {
         {
 			id: 2,
 			title: "PRODUCTO NUMERO UNO",
-			description: "AAAAAAAAAAAAAA",
+			description: "string",
 			price: "$150",
 			pictureUrl: "url2",
         },
@@ -61,7 +61,7 @@ function ItemList() {
         <>
 		<div className="row">
 			<div className="in-sm-12 in-md-8 in-lg-8">
-				<div className="row">
+				<div className="row row-products">
 					<Item data={products} />
 				</div>
 			</div>
