@@ -1,6 +1,8 @@
 @import './navBar';
 @import './grid-system/gridSystem';
 @import './product';
+@import './carrousel.scss';
+
 
 .row{
     display: flex;
@@ -9,5 +11,18 @@
 
 body{
     background-color: #FCFFF2;
+    overflow-x: hidden;
 }
+
+.products-div {
+
+    .products-h2{
+    text-align: center;
+    margin: 10px;
+    color: #A6D372;
+    text-decoration: underline;
+    letter-spacing:1.5px;
+}
+}
+
 

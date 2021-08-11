@@ -17,15 +17,16 @@ function ItemCount(props){
     
     return(
             <div className="buttdiv buttons">
-                <div className="counter">{count}</div>
+                
+                <input className="counter-input" value={count} type="text"/>
 
-                <button className="" onClick={ () => (
+                <button className="count-button" onClick={ () => (
                     setCount(count + 1)
                 )}> + </button>
 
                 <button className="add" onClick={() => (props.onAdd(count, props.stock, cartNumber))}>Add to cart</button>
 
-                <button className="" onClick = {() => (
+                <button className="count-button" onClick = {() => (
                     setCount(count - 1)
                 )}> - </button>
 

@@ -3,6 +3,8 @@ import ItemCount from './ItemCount'
 
 function Item(props) {
 
+    const count = props.count
+
          return(
             <>
             {props.data.map(({...props}) => (
