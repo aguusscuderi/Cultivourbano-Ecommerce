@@ -1,0 +1,23 @@
+.detail-product-container {
+    padding: 25px;
+    .row{
+        margin: 25px;
+        border: 1px solid greenyellow;
+    }
+    .product-image-detail_container{
+        text-align: center;
+        img{
+            height: auto;
+            max-width: 100%;
+        }
+    }
+    .product-info-detail_container{
+        text-align: center;
+        padding: 30px;
+        font-size: 35px;
+        h1 {
+            margin: 15px;
+        }
+        
+    }
+}

@@ -4,6 +4,7 @@ import Item from './Item'
 function ItemList() {
 	const [products, setProducts] = useState([]);
 
+
 	const dataProducts = [
 		{
 			id: 1,
@@ -66,7 +67,7 @@ function ItemList() {
 				</div>
 			</div>
 			<div className="in-sm-12 in-md-4 in-lg-4">
-			  
+			  	
 			</div>
 		</div>
 		

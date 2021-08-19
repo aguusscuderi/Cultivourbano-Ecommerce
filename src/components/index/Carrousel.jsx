@@ -16,7 +16,7 @@ export default function Carrousel (){
 
   const NextArrow = ({onClick}) => {
     return(
-      <div className="" onClick={onClick}>
+      <div className="slider next-slider" onClick={onClick}>
         <i class="fas fa-arrow-right"></i>
       </div>
     )
@@ -24,7 +24,7 @@ export default function Carrousel (){
 
   const PrevArrow = ({onClick}) => {
     return(
-      <div className="" onClick={onClick}>
+      <div className="slider prev-slider" onClick={onClick}>
         <i class="fas fa-arrow-left"></i>
       </div>
     )
