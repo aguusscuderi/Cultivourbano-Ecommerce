@@ -462,7 +462,7 @@ nav .mobile__nav-container .flex__ul li a {
   margin-top: 50px;
 }
 
-p {
+.prod_counter {
   font-size: 0.6em;
   color: black;
   letter-spacing: 1px;
@@ -511,7 +511,7 @@ h2 {
 
 button {
   background: #9FE19A;
-  padding: 10px;
+  padding: 5px;
   display: inline-block;
   outline: 0;
   border: 0;
@@ -526,30 +526,9 @@ button:hover {
   background: #78CF71;
   transition: all 0.4s ease-in-out;
 }
-
-.add {
-  width: 67%;
-}
-
-.like {
-  width: 22%;
-}
-
-.size {
-  padding: 9px;
-  border: 1px solid #E0C9CB;
-  font-size: 0.7em;
-  text-align: center;
-}
-.size:hover {
-  background: #BA7E7E;
-  color: #F5F5F5;
-  transition: all 0.4s ease-in-out;
-}
-
-.focus {
-  background: #BA7E7E;
-  color: #F5F5F5;
+.counter-input {
+  border-radius: 500px;
+  background-color: #C8C8C8;
 }
 
 .carousel-div-container {
@@ -568,13 +547,8 @@ button:hover {
   opacity: 0.8;
   border-radius: 50%;
 }
-.carousel-div-container .slick-slider .slider i {
-  color: white;
-}
-@media screen and (max-width: 385px) {
-  .carousel-div-container .slick-slider .slider {
-    transform: scale(0.5);
-  }
+.carousel-div-container .slick-slider img {
+  width: 100%;
 }
 
 .detail-product-container {
@@ -582,7 +556,7 @@ button:hover {
 }
 .detail-product-container .row {
   margin: 25px;
-  border: 1px solid greenyellow;
+  border: 2px solid #78CF71;
 }
 .detail-product-container .product-image-detail_container {
   text-align: center;
@@ -600,6 +574,10 @@ button:hover {
   margin: 15px;
 }
 
+@font-face {
+  font-family: "Advent";
+  src: url(../../web-fonts/adventpro_bold_macroman/adventpro-bold-webfont.woff) format("woff");
+}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -608,14 +586,15 @@ button:hover {
 body {
   background-color: #FCFFF2;
   overflow-x: hidden;
+  font-family: "Advent";
 }
 
 .products-div .products-h2 {
   text-align: center;
-  margin: 10px;
-  color: #A6D372;
-  text-decoration: underline;
-  letter-spacing: 1.5px;
+  color: black;
+  padding: 20px;
+  background-color: #A6D372;
+  letter-spacing: 1px;
 }
 
 /*# sourceMappingURL=style.css.map */

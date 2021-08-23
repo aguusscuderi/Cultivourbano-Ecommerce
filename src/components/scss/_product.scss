@@ -20,7 +20,7 @@ $dark: #78CF71;
   margin-top: 50px;
 }
 
-p {
+.prod_counter {
   font-size: 0.6em;
   color: black;
   letter-spacing: 1px;
@@ -43,8 +43,6 @@ h2 {
   width: 100%;
 }
 }
-
-
 
 
 .product {
@@ -76,7 +74,7 @@ h2 {
 
 button {
   background: #9FE19A;;
-  padding: 10px;
+  padding: 5px;
   display: inline-block;
   outline: 0;
   border: 0;
@@ -87,35 +85,19 @@ button {
   color: $white;
   cursor: pointer;
   &:hover {
+    p{
+
+    }
     background: #78CF71;
     transition: all .4s ease-in-out;
   }
 }
 
-.add {
-  width: 67%;
-}
-
-.like {
-  width: 22%;
+.counter-input{
+  border-radius: 500px;
+  background-color: #C8C8C8;
 }
 
 
 
-.size {
-  padding: 9px;
-  border: 1px solid $light;
-  font-size: 0.7em;
-  text-align: center;
-  &:hover{
-    background: $rose;
-    color: $white;
-    transition: all .4s ease-in-out;
-  }
-}
-
-.focus{
-  background: $rose;
-  color: $white;
-}
 

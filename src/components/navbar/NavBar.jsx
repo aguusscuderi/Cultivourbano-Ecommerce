@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react'
+import { Link } from 'react-router-dom'
 import '../css/style.css'
 import banner from '../../imagenes/cultivourbano_banner.png'
 import CartWidget from './CartWidget'
@@ -31,12 +32,10 @@ function NavBar (){
     return (
         <>
         <div className="banner_container">
-            <img src={banner} alt=""/>
+            <Link to="/"><img src={banner} alt=""/></Link>
         </div> 
         <nav>
-            
             <CartWidget/>
-
             <div onClick={slide} className="burger">
                 <div className="line1"></div>
                 <div className="line2"></div>
@@ -44,9 +43,9 @@ function NavBar (){
             </div>
             <div className="mobile__nav-container mb__nav-container-visible">
                 <ul className="flex__ul">
-                    <li className="flex__li-item"> <a href=" " className="navLink"> <i className="fas fa-home"></i> Inicio  </a> </li>
+                    <li className="flex__li-item"> <Link to="/"> <i className="fas fa-home"></i> Inicio </Link> </li>
                     <li className="flex__li-item"> <a href=" " className="navLink"> <i className="fas fa-question-circle"></i> Quienes somos </a> </li>
-                    <li className="flex__li-item"> <a href=" " className="navLink"> <i className="fas fa-store"></i> Productos </a></li>
+                    <li className="flex__li-item"> <Link to="/products"> <i className="fas fa-store"></i> Productos </Link></li>
                     <li className="flex__li-item"> <a href=" " className="navLink"> <i className="fas fa-users"></i>  Contactanos  </a> </li>
                     <li className="flex__li-item"> <a href=" " className="navLink"> <i className="fas fa-home"></i> Sucursales </a> </li>
                 </ul>

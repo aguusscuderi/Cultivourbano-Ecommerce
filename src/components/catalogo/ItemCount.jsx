@@ -2,11 +2,9 @@ import React, { useState, useEffect } from "react";
 
 function ItemCount(props){
     const [count, setCount] = useState(parseInt(props.initial))
-
-
+    
     const cartNumber = (document.querySelector('.prod_counter'))
     const cartNumberParseInt = parseInt(cartNumber.innerText)
-    console.log(cartNumberParseInt)
 
     useEffect(() => {
         const divButt = document.querySelectorAll('.buttons')
@@ -25,13 +23,13 @@ function ItemCount(props){
 
                 <button className="count-button" onClick={ () => (
                     setCount(count + 1)
-                )}> + </button>
+                )}> <p>+</p> </button>
 
-                <button className="add" onClick={() => (props.onAdd(count, props.stock, cartNumber, cartNumberParseInt))}>Add to cart</button>
+                <button className="add" onClick={() => (props.onAdd(count, props.stock, cartNumber, cartNumberParseInt))}><p>Add to cart</p></button>
 
                 <button className="count-button" onClick = {() => (
                     setCount(count - 1)
-                )}> - </button>
+                )}><p>-</p></button>
 
             </div>
     )

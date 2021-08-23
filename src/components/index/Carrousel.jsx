@@ -1,20 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import Image1 from '../../imagenes/index-carr1.jpg'
 import Slider from "react-slick";
 
 export default function Carrousel (){
+  const [imageIndex, setImageIndex] = useState(0)
 
   const images = [
-    { url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIUhMo1wDAmoHQXQRo1O5_i6LndoOQmJx6p1IcTfFpY4EAHGuNEFZNf-77sdZi4YqOTjo&usqp=CAU'},
+    { url: Image1},
     { url: '2'},
     { url: '3'},
     { url: '4'},
     { url: '5'}
   ]
-  
 
-  const [imageIndex, setImageIndex] = useState(0)
-
-  const NextArrow = ({onClick}) => {
+  /*const NextArrow = ({onClick}) => {
     return(
       <div className="slider next-slider" onClick={onClick}>
         <i class="fas fa-arrow-right"></i>
@@ -28,17 +27,18 @@ export default function Carrousel (){
         <i class="fas fa-arrow-left"></i>
       </div>
     )
-  }
+  }*/
 
-  const settings = {
+    const settings = {
       dots: true,
       infinite: true,
-      speed: 500,
+      speed: 1500,
       slidesToShow: 1,
-      slidesToScroll: 1,
-      nextArrow: <NextArrow/>,
-      prevArrow: <PrevArrow/>,
-      beforeChange: (current, next) => setImageIndex(next)
+      slidesToScroll:  1,
+      //nextArrow: <NextArrow/>,
+      //prevArrow: <PrevArrow/>,
+      autoplay: true,
+      beforeChange: (current, next) => setImageIndex(next),
     };
 
     return (

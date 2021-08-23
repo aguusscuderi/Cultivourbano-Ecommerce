@@ -4,6 +4,10 @@
 @import './carrousel.scss';
 @import './detailProduct.scss';
 
+@font-face {
+    font-family: 'Advent';
+    src: url(../../web-fonts/adventpro_bold_macroman/adventpro-bold-webfont.woff) format('woff');
+}
 
 .row{
     display: flex;
@@ -13,17 +17,18 @@
 body{
     background-color: #FCFFF2;
     overflow-x: hidden;
-}
+    font-family: 'Advent';
+};  
 
-.products-div {
 
+.products-div{
     .products-h2{
     text-align: center;
-    margin: 10px;
-    color: #A6D372;
-    text-decoration: underline;
-    letter-spacing:1.5px;
-}
-}
+    color: black;
+    padding: 20px;
+    background-color: #A6D372;
+    letter-spacing:1px;
+    }
+};
 
 
