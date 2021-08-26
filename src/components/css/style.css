@@ -531,24 +531,21 @@ button:hover {
   background-color: #C8C8C8;
 }
 
-.carousel-div-container {
-  margin-bottom: 50px;
-}
-.carousel-div-container .slick-slider {
+.slick-slider {
   display: flex;
   flex-direction: row;
   text-align: center;
   align-items: center;
 }
-.carousel-div-container .slick-slider .slider {
+.slick-slider .slider {
   margin: 5px;
   padding: 5px;
   background-color: gray;
   opacity: 0.8;
   border-radius: 50%;
 }
-.carousel-div-container .slick-slider img {
-  width: 100%;
+.slick-slider img {
+  max-width: 100%;
 }
 
 .detail-product-container {

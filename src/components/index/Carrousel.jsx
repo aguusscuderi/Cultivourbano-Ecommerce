@@ -32,7 +32,7 @@ export default function Carrousel (){
     const settings = {
       dots: true,
       infinite: true,
-      speed: 1500,
+      speed: 1000,
       slidesToShow: 1,
       slidesToScroll:  1,
       //nextArrow: <NextArrow/>,
@@ -42,20 +42,20 @@ export default function Carrousel (){
     };
 
     return (
-      <div className="carousel-div-container">
+    
         <Slider {...settings}>
           {images.map((img, idx) => {
             console.log(img, idx, imageIndex)
             return(
               <>
             <div className={idx === imageIndex ? 'slide activeSlide' : 'slide'}>
-              <img src={img.url} alt="" />
+              <img className="carrousel-image" src={img.url} alt="" />
             </div>
               </>
             )
           })}
         </Slider>
-      </div>
+     
 
     );
 }

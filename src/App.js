@@ -15,10 +15,10 @@ function App() {
         <Index/>
       </Route>
       <Route exact path="/products">
-      <div className="products-div">
-        <h2 className="products-h2">PRODUCTOS</h2>
-        <ItemListContainer/>
-      </div>
+        <div className="products-div">
+          <h2 className="products-h2">PRODUCTOS</h2>
+          <ItemListContainer/>
+        </div>
       </Route>
       <Route exact path={`/products/product/:id`}>
         <ItemDetailContainer/>

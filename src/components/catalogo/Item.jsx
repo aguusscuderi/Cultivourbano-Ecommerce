@@ -4,6 +4,16 @@ import ItemCount from './ItemCount'
 
 function Item(props) {
 
+    //Add Cart
+    const onAdd = (counter, stock, cartCounter, parsedCartCounter) => {
+        if(counter <= stock ){
+            cartCounter.innerHTML = counter + parsedCartCounter
+         }else{
+             console.log('no hay stock')
+         }
+    }
+    
+
          return(
             <>
             {props.data.map(({...props}) => (
@@ -20,14 +30,7 @@ function Item(props) {
                             <p className="desc">{props.description}</p>
                 
                             {/*Componente de BOTONES, con funcionalidad*/}
-                            <ItemCount stock = "5" initial = "1"  onAdd = {(counter, stock, cartCounter, parsedCartCounter) => {
-                                if(counter <= stock ){
-                                   cartCounter.innerHTML = counter + parsedCartCounter
-                                
-                                }else{
-                                    console.log('no hay stock')
-                                }
-                            }}/>
+                            <ItemCount stock = "5" initial = "1"  onAdd = {onAdd}/>
                             
                         </div>    
                     </div>

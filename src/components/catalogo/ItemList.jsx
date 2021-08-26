@@ -1,9 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import productsJson from './productsJson'
 import Item from './Item'
+import { CartContext } from '../context/cartContext'
 
 function ItemList() {
 	const [products, setProducts] = useState([]);
+
+	const isDark = useContext(CartContext)
+
+	console.log(isDark)
 
 	useEffect(() => {
 		new Promise((resolve, reject) => {
@@ -21,10 +26,7 @@ function ItemList() {
 
     return (
         <>
-
-					<Item data={products} />
-		
-		
+		<Item data={products} />
         </>
     )
      
