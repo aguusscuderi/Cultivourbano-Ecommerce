@@ -1,10 +1,14 @@
 import React, {  useState, useEffect } from "react"
 import { useParams } from 'react-router-dom'
+import { CartContext } from '../context/cartContext'
 import productsJson from './productsJson'
 import ItemDetail from './ItemDetail'
+import Cart from "../cart/Cart"
 
 export default function ItemDetailContainer() {
     const [thisProduct, setThisProduct] = useState([])
+
+    
 
     const { id } = useParams()
 
@@ -16,6 +20,7 @@ export default function ItemDetailContainer() {
         })
         .then((product) => {
             setThisProduct(product[0])
+            
         })
     
     }catch(error){
@@ -29,6 +34,8 @@ export default function ItemDetailContainer() {
 
 
     return(
+        <>
         <ItemDetail {...thisProduct}/>
+        </>
     )
 }

@@ -45,7 +45,6 @@ export default function Carrousel (){
     
         <Slider {...settings}>
           {images.map((img, idx) => {
-            console.log(img, idx, imageIndex)
             return(
               <>
             <div className={idx === imageIndex ? 'slide activeSlide' : 'slide'}>

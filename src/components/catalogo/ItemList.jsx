@@ -6,9 +6,8 @@ import { CartContext } from '../context/cartContext'
 function ItemList() {
 	const [products, setProducts] = useState([]);
 
-	const isDark = useContext(CartContext)
-
-	console.log(isDark)
+	const { cart } = useContext(CartContext)
+	console.log(cart)
 
 	useEffect(() => {
 		new Promise((resolve, reject) => {

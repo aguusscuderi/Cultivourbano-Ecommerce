@@ -1,8 +1,11 @@
 import React from "react";
+import {useContext} from 'react'
 import ItemCount from './ItemCount'
+import { CartContext } from '../context/cartContext'
 
 export default function ItemDetail(props) {
 
+ 
     
     //Add Cart
     const onAdd = (counter, stock, cartCounter, parsedCartCounter) => {
@@ -12,8 +15,10 @@ export default function ItemDetail(props) {
              console.log('no hay stock')
          }
     }
-    
 
+    //Almaceno el PRODUCTO que llega en una variable y se lo paso al Count
+    const theProduct = {...props}
+    
     return(
         <>
         <div className="detail-product-container">
@@ -26,7 +31,7 @@ export default function ItemDetail(props) {
                         <p>{props.description}</p>
                         <p>{props.price}</p>
 
-                    <ItemCount stock = "5" initial = "1" onAdd={onAdd}/>
+                    <ItemCount theProduct={theProduct} stock = "5" initial = "1" onAdd={onAdd}/>
 
                     </div>
                 </div>

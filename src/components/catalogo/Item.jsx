@@ -27,11 +27,7 @@ function Item(props) {
                         <div className="product">
                             <h1>{props.title}</h1>
                             <h2>{props.price}</h2>
-                            <p className="desc">{props.description}</p>
-                
-                            {/*Componente de BOTONES, con funcionalidad*/}
-                            <ItemCount stock = "5" initial = "1"  onAdd = {onAdd}/>
-                            
+                            <p className="desc">{props.description}</p>         
                         </div>    
                     </div>
                 </div>
