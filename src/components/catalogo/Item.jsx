@@ -17,7 +17,7 @@ function Item(props) {
          return(
             <>
             {props.data.map(({...props}) => (
-                <div className="in-sm-12 in-md-4 in-lg-4">
+                <div key={props.id} className="in-sm-12 in-md-4 in-lg-4">
                     <div className="container">
                     <Link to={`/products/product/${props.id}`}>
                         <div className="images">

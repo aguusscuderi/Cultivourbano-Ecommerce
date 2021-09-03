@@ -29,10 +29,12 @@ function ItemCount(props){
 
     useEffect(() => {
         //onClick al boton de add to cart
-        console.log('added to cart',cartCount)
+        console.log('added to cart', cartCount)
     }, [cartCount])
 
-    console.log(cart)
+    
+        console.log('agregado!', cart)
+    
 
 
 

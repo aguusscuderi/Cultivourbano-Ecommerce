@@ -1,6 +1,5 @@
 import { createContext, useEffect } from "react";
 import { useState } from "react";
-import Cart from "../cart/Cart";
 
 export const CartContext = createContext([])
 
@@ -11,16 +10,22 @@ export default function CartContextLogic({defaultValue = [], children}) {
       return cart.some(el => el.id === id)
     }
 
-    
-    const addItem = (item, quantity, count, id) => {
+    const addItem = (item, count, id) => {
       if(isInCart(id)){
-        console.log('el item ya existe')
-        Object.defineProperty(item, 'quantityToBuy', {value: quantity+count, writable: true})
-      }else{
-        setCart([...cart, item])
-        Object.defineProperty(item, 'quantityToBuy', {value: quantity+count, writable: true})
-      }
-    }
+        const product = cart.filter(el => (el.id === id))
+        product[0].quantityToBuy += count
+       }else{
+         setCart([...cart, {
+           id: item.id,
+           title: item.title,
+           description: item.description,
+           price: item.price,
+           pictureUrl: item.pictureUrl,
+           categoria: item.categoria,
+           quantityToBuy: count
+          }])
+       }
+     }
 
  
     /*const removeItem = (item) => {
