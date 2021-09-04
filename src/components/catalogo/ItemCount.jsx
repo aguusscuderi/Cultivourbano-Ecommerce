@@ -50,7 +50,7 @@ function ItemCount(props){
 
 
                 <button className="add" onClick={() =>
-                     (props.onAdd(count, props.stock, cartNumber, cartNumberParseInt, setCartCount(cartCount + count), addItem(props.theProduct, cartCount, count, props.theProduct.id)))
+                     (props.onAdd(count, props.stock, cartNumber, cartNumberParseInt, setCartCount(cartCount + count), addItem(props.theProduct, count, props.theProduct.id)))
                     }>
                     <p>Add to cart</p>
                 </button>
