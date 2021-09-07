@@ -571,6 +571,32 @@ button:hover {
   margin: 15px;
 }
 
+.productInCart-container {
+  display: block;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 30px;
+  margin: 40px;
+  background-color: #F5F5F5;
+  border: 1px solid black;
+  border-radius: 25px;
+}
+.productInCart-container .cartImage-container {
+  height: 30%;
+  width: 30%;
+}
+@media screen and (max-width: 760px) {
+  .productInCart-container .cartImage-container {
+    width: 100%;
+  }
+}
+.productInCart-container .cartImage-container img {
+  max-width: 100%;
+}
+
 @font-face {
   font-family: "Advent";
   src: url(../../web-fonts/adventpro_bold_macroman/adventpro-bold-webfont.woff) format("woff");
@@ -586,11 +612,11 @@ body {
   font-family: "Advent";
 }
 
-.products-div .products-h2 {
+.products-h2 {
   text-align: center;
   color: black;
   padding: 20px;
-  background-color: #A6D372;
+  background-color: #7350A2;
   letter-spacing: 1px;
 }
 

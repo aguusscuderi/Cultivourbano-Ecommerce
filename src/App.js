@@ -13,9 +13,9 @@ function App() {
   return (
     <>
     <BrowserRouter>
+    <CartContextLogic>
       <NavBar/>
       <Switch>
-        <CartContextLogic>
           <Route exact path="/">
             <Index/>
           </Route>
@@ -29,10 +29,11 @@ function App() {
               <ItemDetailContainer/>
           </Route>
           <Route exact path={`/cart`}>
+          <h2 className="products-h2">CARRITO</h2>
             <Cart/>
           </Route>
-        </CartContextLogic>
       </Switch>
+      </CartContextLogic>
     </BrowserRouter>
    
     </> 

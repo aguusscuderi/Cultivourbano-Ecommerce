@@ -4,16 +4,6 @@ import ItemCount from './ItemCount'
 
 function Item(props) {
 
-    //Add Cart
-    const onAdd = (counter, stock, cartCounter, parsedCartCounter) => {
-        if(counter <= stock ){
-            cartCounter.innerHTML = counter + parsedCartCounter
-         }else{
-             console.log('no hay stock')
-         }
-    }
-    
-
          return(
             <>
             {props.data.map(({...props}) => (
@@ -26,7 +16,7 @@ function Item(props) {
                     </Link>
                         <div className="product">
                             <h1>{props.title}</h1>
-                            <h2>{props.price}</h2>
+                            <h2>${props.price}</h2>
                             <p className="desc">{props.description}</p>         
                         </div>    
                     </div>

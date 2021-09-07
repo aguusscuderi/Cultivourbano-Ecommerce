@@ -1,0 +1,24 @@
+.productInCart-container {
+    display: block;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px;
+    margin: 40px;
+    background-color: #F5F5F5;
+    border: 1px solid black;
+    border-radius: 25px;
+
+    .cartImage-container{
+        height: 30%;
+        width: 30%;
+        @media screen and (max-width: 760px) {
+           width: 100%;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+}

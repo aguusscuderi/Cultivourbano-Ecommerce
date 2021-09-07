@@ -3,6 +3,7 @@
 @import './product';
 @import './carrousel.scss';
 @import './detailProduct.scss';
+@import './cartProduct.scss';
 
 @font-face {
     font-family: 'Advent';
@@ -21,14 +22,13 @@ body{
 };  
 
 
-.products-div{
+
     .products-h2{
     text-align: center;
     color: black;
     padding: 20px;
-    background-color: #A6D372;
+    background-color: #7350A2;
     letter-spacing:1px;
     }
-};
 
 
