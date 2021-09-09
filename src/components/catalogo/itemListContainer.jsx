@@ -1,6 +1,5 @@
-import { useState } from 'react';
+
 import ItemList from './ItemList';
-import { CartContext } from '../context/cartContext'
 
 function ItemListContainer() {
     
@@ -10,7 +9,7 @@ function ItemListContainer() {
 			<div className="in-sm-12 in-md-8 in-lg-8">
 				<div className="row row-products">
                     
-                           <ItemList/>
+                    <ItemList/>
                  
 				</div>
 			</div>

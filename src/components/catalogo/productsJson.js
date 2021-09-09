@@ -38,4 +38,4 @@ const productsJson = [
     },
 ];
 
-export default productsJson
+//export default productsJson

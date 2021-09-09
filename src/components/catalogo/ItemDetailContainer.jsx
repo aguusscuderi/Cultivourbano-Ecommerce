@@ -1,18 +1,20 @@
 import React, {  useState, useEffect } from "react"
 import { useParams } from 'react-router-dom'
-import { CartContext } from '../context/cartContext'
+import { ProductContext } from "../context/productsContext"
 import productsJson from './productsJson'
 import ItemDetail from './ItemDetail'
-import Cart from "../cart/Cart"
+import { useContext } from "react/cjs/react.development"
 
 export default function ItemDetailContainer() {
-    const [thisProduct, setThisProduct] = useState([])
+    //const [thisProduct, setThisProduct] = useState([])
+    const [thisProductContext, setThisProductContext] = useState([])
+    const { products } = useContext(ProductContext)
+   
+    console.log(products, 'Llegando al detalle :D desde Firebase y Context.')
 
-    
+    const { idFire } = useParams()
 
-    const { id } = useParams()
-
-    const getItem = async () => {
+   /* const getItem = async () => {
         try{await new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(productsJson.filter((el) => el.id === id))
@@ -26,16 +28,30 @@ export default function ItemDetailContainer() {
     }catch(error){
             console.log('error', error)
         }
+    }*/
+
+    const getItemFromContext = async () => {
+        try{await new Promise((resolve, reject) => {
+            resolve(products.filter((el) => el.idFire === idFire))
+        })
+        .then((product) => {
+            setThisProductContext(product[0])
+            console.log(product, 'El producto :D')
+        })
+    }catch(error){
+            console.log('error', error)
+        }
     }
 
     useEffect(() => {
-        getItem()
+        //getItem()
+        getItemFromContext()
     }, [])
 
 
     return(
         <>
-        <ItemDetail {...thisProduct}/>
+        <ItemDetail {...thisProductContext}/>
         </>
     )
 }

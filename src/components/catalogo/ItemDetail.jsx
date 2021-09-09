@@ -1,7 +1,6 @@
 import React from "react";
-import {useContext} from 'react'
 import ItemCount from './ItemCount'
-import { CartContext } from '../context/cartContext'
+
 
 export default function ItemDetail(props) {
     //Almaceno el PRODUCTO que llega en una variable y se lo paso al Count

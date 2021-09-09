@@ -1,7 +1,8 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 import { useState } from "react"
-import { CartContext } from '../src/components/context/cartContext'
+//import { CartContext } from '../src/components/context/cartContext'
 import CartContextLogic from '../src/components/context/cartContext'
+import ProductsApi from '../src/components/context/productsContext'
 import NavBar from  "./components/navbar/NavBar"
 import ItemListContainer from './components/catalogo/itemListContainer'
 import Index from './components/index/Index'
@@ -14,6 +15,7 @@ function App() {
     <>
     <BrowserRouter>
     <CartContextLogic>
+    <ProductsApi>
       <NavBar/>
       <Switch>
           <Route exact path="/">
@@ -25,7 +27,7 @@ function App() {
               <ItemListContainer/>
             </div>
           </Route>
-          <Route exact path={`/products/product/:id`}>
+          <Route exact path={`/products/product/:idFire`}>
               <ItemDetailContainer/>
           </Route>
           <Route exact path={`/cart`}>
@@ -33,6 +35,7 @@ function App() {
             <Cart/>
           </Route>
       </Switch>
+      </ProductsApi>
       </CartContextLogic>
     </BrowserRouter>
    

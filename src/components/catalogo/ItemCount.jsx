@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'
 import { CartContext } from '../context/cartContext'
 import {useContext} from 'react'
-import CartWidget from '../navbar/CartWidget'
 
 function ItemCount(props){
         //Estado del contador
