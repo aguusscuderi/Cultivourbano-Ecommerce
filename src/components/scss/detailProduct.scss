@@ -13,11 +13,34 @@
     }
     .product-info-detail_container{
         text-align: center;
-        padding: 30px;
-        font-size: 35px;
+        // padding: 30px;
+        // font-size: 35px;
         h1 {
             margin: 15px;
         }
         
     }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        button {
+        background: #9FE19A;;
+        padding: 5px;
+        display: inline-block;
+        outline: 0;
+        border: 0;
+        margin: -1px;
+        border-radius: 2px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $white;
+        cursor: pointer;
+        &:hover {
+            background: #78CF71;
+            transition: all .4s ease-in-out;
+        }
+    }
+    }
+   
 }

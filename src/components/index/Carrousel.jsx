@@ -13,30 +13,12 @@ export default function Carrousel (){
     { url: '5'}
   ]
 
-  /*const NextArrow = ({onClick}) => {
-    return(
-      <div className="slider next-slider" onClick={onClick}>
-        <i class="fas fa-arrow-right"></i>
-      </div>
-    )
-  }
-
-  const PrevArrow = ({onClick}) => {
-    return(
-      <div className="slider prev-slider" onClick={onClick}>
-        <i class="fas fa-arrow-left"></i>
-      </div>
-    )
-  }*/
-
-    const settings = {
+  const settings = {
       dots: true,
       infinite: true,
       speed: 1000,
       slidesToShow: 1,
       slidesToScroll:  1,
-      //nextArrow: <NextArrow/>,
-      //prevArrow: <PrevArrow/>,
       autoplay: true,
       beforeChange: (current, next) => setImageIndex(next),
     };

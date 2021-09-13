@@ -6,16 +6,25 @@ import {useContext} from 'react'
 function ItemCount(props){
         //Estado del contador
     const [count, setCount] = useState(parseInt(props.initial))
+    const [enabled, setEnabled] = useState(true)
 
         //Contexto CartContext
     const { cart, addItem, cartCount } = useContext(CartContext)
     
     useEffect(() => {
         //onClick a la suma o resta
-            //console.log('added to count', count)
     }, [count])
 
+
+ 
+    useEffect(() => {
+        if(props.theProduct){
+            setEnabled(false)
+        }
+    }, [enabled])
+
     console.log('agregado!', cart)
+
 
     return(
             <>
@@ -23,22 +32,25 @@ function ItemCount(props){
                 
                 <input className="counter-input" value={count} type="text"/>
 
-                <button className="count-button" onClick={() => (setCount(count + 1))}> <p>+</p> </button>
+                <div style={{height: "50%"}, {padding:"5px"}}>
+                    <button className="count-button" onClick={() => (setCount(count + 1))}><p> + </p></button>
 
 
-                <button className="add" onClick={() =>(addItem(props.theProduct, count, props.theProduct.id))}>
-                    <p>Add to cart</p>
-                </button>
+                    <button  disabled={enabled} className="add" onClick={() => addItem(props.theProduct, count, props.theProduct.id)}>
+                        <p>Add to cart</p>
+                     </button>
                 
 
-                <button className="count-button" onClick = {() => (setCount(count - 1))}><p>-</p></button>
+                     <button className="count-button" onClick = {() => (setCount(count - 1))}><p> - </p></button>
+                </div>
+             
 
                 <Link to="/products">
                     <button> Continua tu compra! </button>
                 </Link>
 
                 <Link to="/cart">    
-                     {(cartCount > 0 && count<=props.stock ) ? <button style={{margin:"10px"}}> Terminar compra </button> : ''}  
+                     {(cartCount > 0) ? <button style={{margin:"10px"}}> Terminar compra </button> : ''}  
                 </Link>
             </div>
             </>

@@ -1,10 +1,8 @@
 import React  from "react";
 import { Link } from 'react-router-dom';
-import ItemCount from './ItemCount'
+
 
 function Item(props) {
-    console.log(props, 'Llegan desde Firebase, con Context.')
-
          return(
             <>
             {props.data.map(({...props}) => (

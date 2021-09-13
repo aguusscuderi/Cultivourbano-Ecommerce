@@ -12,13 +12,14 @@ export default function ProductsApi ({children}) {
     useEffect(() => {
         const getProducts = async () => {
 			const productCollection = collection(getData(), 'productos')
+
 			const productsSnapshot = await getDocs(productCollection)
+			
 			const productList = productsSnapshot.docs.map(doc => ({
                 idFire: doc.id,
 				...doc.data()
 			}));
-            
-			console.log(productList)
+        
 			setProducts(productList)
 		}
 

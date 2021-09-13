@@ -1,5 +1,5 @@
+
 export default function CartDetail(props) {
-    console.log('ola llegue', props)
     return(
         <>
             <div className="productInCart-container">
@@ -9,10 +9,12 @@ export default function CartDetail(props) {
                     <p> {props.description} </p>
                     <p> Precio: ${props.price} x1 </p>
                 </div>
+
                 <div className="cartImage-container">
                     <img src="http://mistillas.cl/wp-content/uploads/2018/04/Nike-Epic-React-Flyknit-%E2%80%9CPearl-Pink%E2%80%9D-01.jpg" alt="" />
                 </div>
-                <button onClick={() => {props.remove(props)}}> Remover este item </button>
+                
+                <i style={{cursor: "pointer"}} onClick={() => {props.remove(props)}} className="far fa-trash-alt"> </i>
             </div>
           
         </>

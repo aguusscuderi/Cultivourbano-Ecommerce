@@ -1,8 +1,5 @@
 
 $white: #F5F5F5;
-$light: #E0C9CB;
-$tan: #C3A1A0;
-$pink: #D9AAB7;
 $rose: #BA7E7E;
 $dark: #78CF71;
 
@@ -70,27 +67,6 @@ h2 {
   line-height: 1.6em;
   margin-right: 25px;
   text-align: justify;
-}
-
-button {
-  background: #9FE19A;;
-  padding: 5px;
-  display: inline-block;
-  outline: 0;
-  border: 0;
-  margin: -1px;
-  border-radius: 2px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: $white;
-  cursor: pointer;
-  &:hover {
-    p{
-
-    }
-    background: #78CF71;
-    transition: all .4s ease-in-out;
-  }
 }
 
 .counter-input{

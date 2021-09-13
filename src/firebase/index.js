@@ -18,3 +18,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 export const getData = () => getFirestore(app)
+
+
+

@@ -1,3 +1,4 @@
+
 .productInCart-container {
     display: block;
     width: 50%;
@@ -6,10 +7,15 @@
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 30px;
-    margin: 40px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 20px auto;
     background-color: #F5F5F5;
     border: 1px solid black;
     border-radius: 25px;
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba($rose, .5);
 
     .cartImage-container{
         height: 30%;
@@ -19,6 +25,76 @@
         }
         img {
             max-width: 100%;
+        }
+    }
+}
+
+.but_clearCart {
+        background: #9FE19A;;
+        padding: 5px;
+        display: inline-block;
+        outline: 0;
+        border: 0;
+        margin: 5px;
+        border-radius: 2px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $white;
+        cursor: pointer;
+    &:hover {
+        background: #78CF71;
+        transition: all .4s ease-in-out;
+        }
+}
+
+.buying-form-div {
+    text-align: center;
+    form{
+        div{
+            margin: 10px;
+            label{
+                display: block;
+            }
+            input{
+             border: none;   
+             border-bottom: 1px solid black;
+             background-color: transparent;
+            }
+        }
+
+    button {
+        background: #9FE19A;;
+        padding: 5px;
+        display: inline-block;
+        outline: 0;
+        border: 0;
+        margin: 5px;
+        border-radius: 2px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $white;
+        cursor: pointer;
+    &:hover {
+        background: #78CF71;
+        transition: all .4s ease-in-out;
+        }
+    }
+  }
+}
+
+.successful-bought-div {
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    background-color: #7350A2;
+    border-radius: 15px;
+    span {
+        font-size: 1.3em;
+        strong{
+            display: block;
+            letter-spacing: 1px;
+            margin: 3px;
+            color: white;
         }
     }
 }

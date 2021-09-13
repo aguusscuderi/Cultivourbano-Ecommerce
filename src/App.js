@@ -1,6 +1,4 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom"
-import { useState } from "react"
-//import { CartContext } from '../src/components/context/cartContext'
 import CartContextLogic from '../src/components/context/cartContext'
 import ProductsApi from '../src/components/context/productsContext'
 import NavBar from  "./components/navbar/NavBar"
