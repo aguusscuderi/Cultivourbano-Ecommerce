@@ -21,15 +21,9 @@ export default function CartFormLog (props) {
     const { cart } = useContext(CartContext)
 
     const handleChange = (e) => {
-        setDatos({
-            ...datos,
-            [e.target.name] : e.target.value,
-            [e.target.name] : e.target.value,
-            [e.target.name] : e.target.value,
-            [e.target.name] : e.target.value,
-            [e.target.name] : e.target.value,
-            [e.target.name] : e.target.value,
-        })
+        e.preventDefault()
+        const {name, value} = e.target
+        setDatos({ ...datos,[name]: value})
     }
 
     const handleSubmit = async (e) => {
@@ -51,6 +45,7 @@ export default function CartFormLog (props) {
                     ...cart
                 },
                 precioFinal: props.finalPrice,
+                fecha: new Date()
             }
     
             const orderReference = await setDoc(orderCollections, order)

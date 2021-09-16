@@ -1,8 +1,10 @@
 .detail-product-container {
-    padding: 25px;
+   
     .row{
         margin: 25px;
-        border: 2px solid #78CF71;
+        background-color: #F5F5F5;
+        border: 15px;
+        box-shadow: 0px 2px 23px -9px rgba(0,0,0,0.5);
     }
     .product-image-detail_container{
         text-align: center;
@@ -13,34 +15,47 @@
     }
     .product-info-detail_container{
         text-align: center;
-        // padding: 30px;
-        // font-size: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         h1 {
             margin: 15px;
         }
-        
-    }
 
-    .buttons {
-        display: flex;
-        flex-direction: column;
-        button {
-        background: #9FE19A;;
-        padding: 5px;
-        display: inline-block;
-        outline: 0;
-        border: 0;
-        margin: -1px;
-        border-radius: 2px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        color: $white;
-        cursor: pointer;
-        &:hover {
-            background: #78CF71;
-            transition: all .4s ease-in-out;
+        p{
+           
         }
     }
+
+    .buttdiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+            button {
+            background: #9FE19A;;
+            padding: 5px;
+            display: inline-block;
+            outline: 0;
+            border: 0;
+            margin: -1px;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: $white;
+            cursor: pointer;
+            &:hover {
+                background: #78CF71;
+                transition: all .4s ease-in-out;
+                }   
+            }
+
+            input{
+                width: 25%;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+
     }
    
 }

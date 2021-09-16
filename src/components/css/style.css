@@ -531,12 +531,11 @@ h2 {
   max-width: 100%;
 }
 
-.detail-product-container {
-  padding: 25px;
-}
 .detail-product-container .row {
   margin: 25px;
-  border: 2px solid #78CF71;
+  background-color: #F5F5F5;
+  border: 15px;
+  box-shadow: 0px 2px 23px -9px rgba(0, 0, 0, 0.5);
 }
 .detail-product-container .product-image-detail_container {
   text-align: center;
@@ -547,15 +546,20 @@ h2 {
 }
 .detail-product-container .product-info-detail_container {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .detail-product-container .product-info-detail_container h1 {
   margin: 15px;
 }
-.detail-product-container .buttons {
+.detail-product-container .buttdiv {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
 }
-.detail-product-container .buttons button {
+.detail-product-container .buttdiv button {
   background: #9FE19A;
   padding: 5px;
   display: inline-block;
@@ -568,9 +572,14 @@ h2 {
   color: #F5F5F5;
   cursor: pointer;
 }
-.detail-product-container .buttons button:hover {
+.detail-product-container .buttdiv button:hover {
   background: #78CF71;
   transition: all 0.4s ease-in-out;
+}
+.detail-product-container .buttdiv input {
+  width: 25%;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .productInCart-container {
@@ -586,7 +595,6 @@ h2 {
   right: 0;
   margin: 20px auto;
   background-color: #F5F5F5;
-  border: 1px solid black;
   border-radius: 25px;
   text-align: center;
   box-shadow: 5px 5px 15px rgba(186, 126, 126, 0.5);
