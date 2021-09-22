@@ -1,7 +1,6 @@
 import React  from "react";
 import { Link } from 'react-router-dom';
 
-
 function Item(props) {
          return(
             <>
@@ -21,9 +20,7 @@ function Item(props) {
                     </div>
                 </div>
                
-            ))} 
-            
-            
+            ))}     
             </>
         )
 }

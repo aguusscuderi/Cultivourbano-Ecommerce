@@ -11,7 +11,7 @@ import './components/css/style.css';
 function App() {
   return (
     <>
-    <BrowserRouter>
+  <BrowserRouter>
     <CartContextLogic>
     <ProductsApi>
       <NavBar/>
@@ -35,7 +35,7 @@ function App() {
       </Switch>
       </ProductsApi>
       </CartContextLogic>
-    </BrowserRouter>
+  </BrowserRouter>
    
     </> 
   );

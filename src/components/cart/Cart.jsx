@@ -21,7 +21,7 @@ export default function Cart() {
 
                 {cart.length>=1 ? <button className="but_clearCart" onClick={() => {clear()}}> Limpiar el carrito </button> : ''}
 
-                {cart.length<=0 ? <img src={CartEmpty}/> : ''}
+                {cart.length<=0 ? <img style={{'maxWidth': '100%'}} src={CartEmpty}/> : ''}
 
                 {cart.map((item) => (
                     <>

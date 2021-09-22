@@ -3,8 +3,10 @@ import { getData } from '../../firebase/index'
 import { collection, doc, setDoc } from "firebase/firestore";
 import { CartContext } from '../context/cartContext'
 import { useContext } from 'react'
+import { Timestamp } from "@firebase/firestore";
 import CartForm from './CartForm'
 import BoughtSuccess from "./successBought";
+
 
 export default function CartFormLog (props) {
     const [loading, setLoading] = useState(true)
@@ -45,7 +47,7 @@ export default function CartFormLog (props) {
                     ...cart
                 },
                 precioFinal: props.finalPrice,
-                fecha: new Date()
+                fecha: Timestamp.fromDate(new Date())
             }
     
             const orderReference = await setDoc(orderCollections, order)

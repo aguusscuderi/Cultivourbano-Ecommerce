@@ -9,22 +9,17 @@ function ItemCount(props){
     const [enabled, setEnabled] = useState(true)
 
         //Contexto CartContext
-    const { cart, addItem, cartCount } = useContext(CartContext)
+    const {addItem, cartCount } = useContext(CartContext)
     
     useEffect(() => {
         //onClick a la suma o resta
     }, [count])
 
-
- 
     useEffect(() => {
         if(props.theProduct){
             setEnabled(false)
         }
     }, [enabled])
-
-    console.log('agregado!', cart)
-
 
     return(
             <>
@@ -35,16 +30,13 @@ function ItemCount(props){
                 <div style={{height: "50%"}, {padding:"5px"}}>
                     <button className="count-button" onClick={() => (setCount(count + 1))}><p> + </p></button>
 
-
-                    <button  disabled={enabled} className="add" onClick={() => addItem(props.theProduct, count, props.theProduct.id)}>
+                    <button disabled={enabled} className="add" onClick={() => addItem(props.theProduct, count, props.theProduct.id)}>
                         <p>Add to cart</p>
                      </button>
                 
-
                      <button className="count-button" onClick = {() => (setCount(count - 1))}><p> - </p></button>
                 </div>
              
-
                 <Link to="/products">
                     <button> Continua tu compra! </button>
                 </Link>

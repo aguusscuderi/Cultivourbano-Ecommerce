@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image1 from '../../imagenes/index-carr1.jpg'
 import Slider from "react-slick";
 
@@ -30,7 +30,7 @@ export default function Carrousel (){
             return(
               <>
             <div className={idx === imageIndex ? 'slide activeSlide' : 'slide'}>
-              <img className="carrousel-image" src={img.url} alt="" />
+              <img className="carrousel-image" src={img.url} key={idx}/>
             </div>
               </>
             )
