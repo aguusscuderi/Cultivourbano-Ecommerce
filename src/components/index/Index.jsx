@@ -5,7 +5,6 @@ export default function Index(){
     return(
         <>
         <Carrousel/>
-        <p>INICIO</p>
         </>
     )
 }

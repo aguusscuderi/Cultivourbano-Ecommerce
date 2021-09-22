@@ -4,7 +4,7 @@ Proyecto creado con: [Create React App](https://github.com/facebook/create-react
 
 ## Available Scripts
 
-In the project directory, you can run:
+En la direccion de tu proyecto, puedes correr:
 
 ### `npm i`
 Para instalar las dependencias
