@@ -68,6 +68,7 @@ nav .mobile__nav-container {
   color: black;
   background-color: #FCFFF2;
   z-index: 100;
+  border-bottom: 1px solid #E5E8E5;
   position: absolute;
   transform: translateY(-900px);
   transition: transform 0.7s, opacity 1s ease-in;
@@ -77,6 +78,7 @@ nav .mobile__nav-container {
     position: relative !important;
     transform: translateY(0px) !important;
     background-color: inherit;
+    border-bottom: transparent;
   }
 }
 nav .mobile__nav-container .flex__ul {
@@ -677,6 +679,30 @@ h2 {
   letter-spacing: 1px;
   margin: 3px;
   color: white;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #A6D372;
+  position: relative;
+  margin: auto;
+  left: 0;
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinner-off {
+  display: none;
 }
 
 @font-face {

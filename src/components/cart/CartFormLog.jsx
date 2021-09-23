@@ -6,10 +6,12 @@ import { useContext } from 'react'
 import { Timestamp } from "@firebase/firestore";
 import CartForm from './CartForm'
 import BoughtSuccess from "./successBought";
+import Spinner from "../otros/Spinner";
 
 
 export default function CartFormLog (props) {
     const [loading, setLoading] = useState(true)
+    const [spinner, setSpinner] = useState(false)
     const [orderId, setOrderId] = useState('')
     const [datos, setDatos] = useState({
         nombre: '',
@@ -28,8 +30,10 @@ export default function CartFormLog (props) {
         setDatos({ ...datos,[name]: value})
     }
 
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setSpinner(true)
 
             const db = getData()
             const orderCollections = doc(collection(db, 'orders'))
@@ -54,12 +58,14 @@ export default function CartFormLog (props) {
         
             setOrderId(orderCollections._key.path.segments[1])
             setLoading(false)
-    }
+            setSpinner(false)
+        }
 
     return(
         <>
         {cart.length>0 ? <CartForm handleSubmit={handleSubmit} handleChange={handleChange}/> : ''}
         {loading == false ? <BoughtSuccess orderId={orderId}/> : ''}
+        {spinner == true ? <Spinner/> : ''}
         </>
     )
 }

@@ -80,6 +80,7 @@ nav {
         color: black;
         background-color: #FCFFF2;
         z-index: 100;
+        border-bottom: 1px solid #E5E8E5;
      
 
         position: absolute;
@@ -90,6 +91,8 @@ nav {
             position: relative !important;
             transform: translateY(0px) !important;
             background-color: inherit;
+            border-bottom: transparent;
+            
         }
 
        .flex__ul {

@@ -1,4 +1,6 @@
+
 export default function CartForm (props) {
+
     return(
     <div className="buying-form-div">
         <h2> Completa tus datos y finaliza tu compra! </h2>
