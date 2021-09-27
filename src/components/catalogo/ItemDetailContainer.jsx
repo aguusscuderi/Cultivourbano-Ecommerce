@@ -9,7 +9,7 @@ export default function ItemDetailContainer() {
     const { products } = useContext(ProductContext)
    
     const { idFire } = useParams()
-
+    
     const getItemFromContext = async () => {
         try {await new Promise((resolve, reject) => {resolve(products.filter((el) => el.idFire === idFire))})
             .then((product) => {

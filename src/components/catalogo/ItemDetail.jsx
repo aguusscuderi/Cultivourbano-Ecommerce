@@ -6,7 +6,6 @@ import MediosDePago from "./MediosDePago";
 export default function ItemDetail(props) {
         //Almaceno el PRODUCTO que llega en una variable y se lo paso al Count
     const theProduct = {...props}
-    
     return(
         <>
         <div className="detail-product-container">

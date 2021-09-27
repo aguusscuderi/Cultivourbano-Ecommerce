@@ -30,7 +30,7 @@ export default function Carrousel (){
             return(
               <>
             <div className={idx === imageIndex ? 'slide activeSlide' : 'slide'}>
-              <img className="carrousel-image" src={img.url} key={idx}/>
+              <img className="carrousel-image" src={img.url} key={idx} alt="carrousel presentation"/>
             </div>
               </>
             )
