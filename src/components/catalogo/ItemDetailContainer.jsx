@@ -5,7 +5,7 @@ import ItemDetail from './ItemDetail'
 import { useContext } from "react/cjs/react.development"
 
 export default function ItemDetailContainer() {
-    const [thisProductContext, setThisProductContext] = useState([])
+    const [ thisProductContext, setThisProductContext ] = useState([])
     const { products } = useContext(ProductContext)
    
     const { idFire } = useParams()

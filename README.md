@@ -27,3 +27,6 @@ Para buildear la app en modo de produccion.
 ### Nota: La aplicacion pudo haber sido sometida a cambios mas alla de lo que se muestra en esta preview.
 
 ![Alt Text](/public/myecommerce.gif "NAVEGANDO LA APP") 
+
+![Alt Text](/public/firebaseOrders.png)
+![Alt Text](/public/firebaseProducts.png)

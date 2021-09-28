@@ -28,6 +28,9 @@ function App() {
           <Route exact path={`/products/product/:idFire`}>
               <ItemDetailContainer/>
           </Route>
+          <Route exact path={`/products/category/:categoryId`}>
+            <ItemListContainer/>
+          </Route>
           <Route exact path={`/cart`}>
           <h2 className="products-h2">CARRITO</h2>
             <Cart/>

@@ -705,6 +705,34 @@ h2 {
   display: none;
 }
 
+.cat_div {
+  text-align: center;
+}
+.cat_div h3 {
+  border-bottom: 2px solid #7350A2;
+  display: inline-block;
+}
+.cat_div a {
+  text-decoration: none;
+}
+.cat_div .category_button {
+  background: #9FE19A;
+  padding: 5px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  margin: 5px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #F5F5F5;
+  cursor: pointer;
+}
+.cat_div .category_button:hover {
+  background: #78CF71;
+  transition: all 0.4s ease-in-out;
+}
+
 @font-face {
   font-family: "Advent";
   src: url(../../web-fonts/adventpro_bold_macroman/adventpro-bold-webfont.woff) format("woff");

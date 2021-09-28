@@ -11,8 +11,7 @@ function ItemList() {
         <>
 		<Item data={products} />
         </>
-    )
-     
+    ) 
 }
 
 export default ItemList;
