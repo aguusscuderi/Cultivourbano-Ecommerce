@@ -17,7 +17,7 @@ export default function Cart() {
             <div style={{'textAlign': "center"}} className="in-sm-12 in-md-8 in-lg-8 cart-center-div">
                 {cart.length<=0 ? <h1>Tu carrito esta vacio, <Link to="/products"> hace tu compra! </Link></h1> : ''}
 
-                <h2> Subtotal: ${cartPrice} </h2> 
+                <h2> Subtotal: {cartPrice} </h2> 
 
                 {cart.length>=1 ? <button className="but_clearCart" onClick={() => {clear()}}> Limpiar el carrito </button> : ''}
 

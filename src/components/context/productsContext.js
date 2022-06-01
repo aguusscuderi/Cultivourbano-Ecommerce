@@ -11,25 +11,6 @@ export default function ProductsApi ({ children }) {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(false)
 
-    /*let { categoryId } = useParams()
-    
-    const getCategory = async () => {
-      console.log(categoryId)
-      const categoryCollection = collection(getData(), 'productos');
-      const categoryQuery = query(categoryCollection, where('categoryId', '==', `${categoryId}`));
-      try {
-        const categorySnapshot = await getDocs(categoryQuery);
-        const categoryList = categorySnapshot.docs.map(doc => ({
-          categoryId: doc.categoryId,
-          ...doc.data()
-        }));
-        console.log({ categoryList });
-        //setProducts(categoryList)
-      } catch (e) {
-        console.log(e);
-      }
-    }*/
-
     const getProducts = async () => {
           setLoading(true)
     const productCollection = collection(getData(), 'productos')
@@ -48,7 +29,7 @@ export default function ProductsApi ({ children }) {
     }, [])
 
     return <>
-    <ProductContext.Provider  value={{ products, /*getCategory*/ }}>
+    <ProductContext.Provider  value={{ products, setProducts, getProducts}}>
         {children}
     </ProductContext.Provider>
     {loading === true ? <Spinner/> : ''}

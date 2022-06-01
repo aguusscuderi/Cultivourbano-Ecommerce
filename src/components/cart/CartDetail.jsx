@@ -7,7 +7,7 @@ export default function CartDetail(props) {
                     <h1>{props.title}</h1>
                     <span> Cantidad: {props.quantityToBuy}</span>
                     <p> {props.description} </p>
-                    <p> Precio: ${props.price} x1 </p>
+                    <p> Precio: {props.price} x1 </p>
                 </div>
 
                 <div className="cartImage-container">

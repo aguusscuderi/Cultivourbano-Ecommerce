@@ -14,7 +14,7 @@
     background-color: #F5F5F5;
     border-radius: 25px;
     text-align: center;
-    box-shadow: 5px 5px 15px rgba($rose, .5);
+    box-shadow: 5px 5px 15px rgba(#BA7E7E, .5);
 
     .cartImage-container{
         height: 30%;
@@ -38,7 +38,7 @@
         border-radius: 2px;
         text-transform: uppercase;
         letter-spacing: 1px;
-        color: $white;
+        color: #F5F5F5;
         cursor: pointer;
     &:hover {
         background: #78CF71;
@@ -71,7 +71,7 @@
         border-radius: 2px;
         text-transform: uppercase;
         letter-spacing: 1px;
-        color: $white;
+        color: #F5F5F5;
         cursor: pointer;
     &:hover {
         background: #78CF71;

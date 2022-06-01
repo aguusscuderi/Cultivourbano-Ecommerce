@@ -27,7 +27,7 @@ function ItemCount(props){
                 
                 <input className="counter-input" value={count} type="text"/>
 
-                <div style={{height: "50%"}, {padding:"5px"}}>
+                <div style={{height: "50%", padding:"5px"}}>
                     <button className="count-button" onClick={() => (setCount(count + 1))}><p> + </p></button>
 
                     <button disabled={enabled} className="add" onClick={() => addItem(props.theProduct, count, props.theProduct.id)}>

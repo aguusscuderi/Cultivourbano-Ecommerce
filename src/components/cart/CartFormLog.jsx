@@ -27,7 +27,7 @@ export default function CartFormLog (props) {
     const handleChange = (e) => {
         e.preventDefault()
         const {name, value} = e.target
-        setDatos({ ...datos,[name]: value})
+        setDatos({ ...datos, [name]: value})
     }
 
 

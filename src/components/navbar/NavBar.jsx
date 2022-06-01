@@ -3,8 +3,12 @@ import { Link } from 'react-router-dom'
 import '../css/style.css'
 import banner from '../../imagenes/cultivourbano_banner.png'
 import CartWidget from './CartWidget'
+import { ProductContext } from '../context/productsContext'
+import { useContext } from 'react'
 
 function NavBar (){
+    const { getProducts } = useContext(ProductContext)
+
     const slide = (e) => {
         const menu = document.querySelector('.mobile__nav-container')
         const links = document.querySelectorAll('.navLink')
@@ -43,7 +47,7 @@ function NavBar (){
             </div>
             <div className="mobile__nav-container mb__nav-container-visible">
                 <ul className="flex__ul">
-                    <li className="flex__li-item"> <Link className="navLink" to="/"> <i className="fas fa-home"></i> Inicio </Link> </li>
+                    <li  onClick={() => { getProducts() }} className="flex__li-item"> <Link className="navLink" to="/"> <i className="fas fa-home"></i> Inicio </Link> </li>
                     <li className="flex__li-item"> <a href=" " className="navLink"> <i className="fas fa-question-circle"></i> Quienes somos </a> </li>
                     <li className="flex__li-item"> <Link className="navLink" to="/products"> <i className="fas fa-store"></i> Productos </Link></li>
                     <li className="flex__li-item"> <a href=" " className="navLink"> <i className="fas fa-users"></i>  Contactanos  </a> </li>
